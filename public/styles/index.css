@@ -1,0 +1,7 @@
+html {
+  --bg-lighter:#dfe4ea;
+  --bg-dark:#57606f;
+}
+body{
+  background-color: var(--bg-dark);
+}

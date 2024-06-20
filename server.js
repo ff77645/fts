@@ -3,14 +3,12 @@ import Router from '@koa/router'
 import fs from 'fs'
 import { createServer } from "http"
 import { Server } from "socket.io";
+import KoaStatic from 'koa-static'
 
 const app = new Koa();
 const router = new Router();
 
-router.get('/', (ctx, next) => {
-  ctx.body = fs.readFileSync('./public/index.html')
-  ctx.set('content-type','text/html')
-});
+app.use(KoaStatic('./public'))
 
 app
   .use(router.routes())

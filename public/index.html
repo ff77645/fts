@@ -5,15 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>File Transfer Service</title>
   <link rel="stylesheet" href="https://cdn.staticfile.net/normalize/8.0.1/normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/index.css"></link>
+  <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.4.29/vue.global.js"></script>
 </head>
 <body>
-  <p>File Transfer Service!</p>
-  <p>File Transfer Service!</p>
-  <p>File Transfer Service!</p>
-  <p>File Transfer Service!</p>
-  <p>File Transfer Service!</p>
-  <p>File Transfer Service!</p>
+  <div id="app">
+    {{ message }}
+    <Demo></Demo>
+  </div>
   <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/app.js"></script>
   <script>
     const socket = io();
     console.log({socket});
